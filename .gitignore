@@ -6,6 +6,10 @@ web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 
+# 2023-08-04 miles
+web/app/updraft
+themes/elcap
+
 # WordPress
 web/wp
 web/.htaccess

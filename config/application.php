@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Your base production configuration goes in this file. Environment-specific
  * overrides go in their respective config/environments/{{WP_ENV}}.php file.
@@ -94,11 +95,21 @@ Config::define('NONCE_SALT', env('NONCE_SALT'));
 Config::define('AUTOMATIC_UPDATER_DISABLED', true);
 Config::define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
 // Disable the plugin and theme file editor in the admin
-Config::define('DISALLOW_FILE_EDIT', true);
+// Config::define('DISALLOW_FILE_EDIT', true);
 // Disable plugin and theme updates and installation from the admin
 Config::define('DISALLOW_FILE_MODS', true);
 // Limit the number of post revisions that Wordpress stores (true (default WP): store every revision)
 Config::define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?: true);
+
+/* Multisite */
+Config::define('WP_ALLOW_MULTISITE', true );
+Config::define('MULTISITE', true );
+Config::define('SUBDOMAIN_INSTALL', false);
+Config::define('DOMAIN_CURRENT_SITE', env('WP_DOMAIN'));
+Config::define('PATH_CURRENT_SITE', '/');
+Config::define('SITE_ID_CURRENT_SITE', 1);
+Config::define('BLOG_ID_CURRENT_SITE', 1);
+Config::define('WP_DEFAULT_THEME', 'elcap/resources');
 
 /**
  * Debugging Settings
