@@ -8,7 +8,7 @@ web/app/uploads/*
 
 # 2023-08-04 miles
 web/app/updraft
-themes/elcap
+web/app/themes/elcap
 
 # WordPress
 web/wp
@@ -27,3 +27,10 @@ web/.htaccess
 
 # WP-CLI
 wp-cli.local.yml
+
+
+
+# OS file browers stuff
+**/.DS_Store
+**/.envrc
+.init
